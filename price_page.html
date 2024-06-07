@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Page</title>
+  <link rel="stylesheet" href="C:\Users\jpras\Documents\Internship project\pricing page\style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Fictional Product</h1>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="info">
+    
+  </section>
+  <main>
+    <section id="pricing">
+      <div class="container">
+        <h2>Our Pricing Plans</h2>
+
+        <!-- Currency and Unit Customization -->
+        <div class="customization-container">
+          <label for="currency">Currency:</label>
+          <select id="currency">
+            <option value="$">USD</option>
+            <option value="€">EUR</option>
+            <option value="£">GBP</option>
+            <option value="₹">RUPEE</option>
+          </select>
+          
+          <label for="unit">Unit:</label>
+          <select id="unit">
+            <option value="/month">Per Month</option>
+            <option value="/year">Per Year</option>
+          </select>
+        </div>
+        
+        <!-- Pricing Toggle -->
+       
+        <div class="pricing-cards">
+          <div class="card" data-monthly-price="10" data-yearly-price="100">
+            <h3>Basic</h3>
+            <p class="price" id="basicPrice">$10/month</p>
+            <ul>
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+            </ul>
+            <button>Choose Plan</button>
+          </div>
+          <div class="card" data-monthly-price="20" data-yearly-price="200">
+            <h3>Standard</h3>
+            <p class="price" id="standardPrice">$20/month</p>
+            <ul>
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+            </ul>
+            <button>Choose Plan</button>
+          </div>
+          <div class="card" data-monthly-price="30" data-yearly-price="300">
+            <h3>Premium</h3>
+            <p class="price" id="premiumPrice">$30/month</p>
+            <ul>
+              <li>Feature 1</li>
+              <li>Feature 2</li>
+              <li>Feature 3</li>
+            </ul>
+            <button>Choose Plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Fictional Product. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="C:\Users\jpras\Documents\Internship project\pricing page\script.js"></script>
+</body>
+</html>

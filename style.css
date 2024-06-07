@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(to right, green , yellow);
+  color: black;
+  padding: 10px 0;
+}
+
+header h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Main Section with Background Image */
+main {
+  background: url('images/background.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 50px 0;
+  background: black;
+}
+
+main .container {
+  background: black; /* Optional: Add a semi-transparent background for better readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Pricing Section */
+#pricing h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: yellowgreen;
+}
+
+.customization-container {
+  text-align: center;
+  margin-bottom: 20px;
+  color: yellowgreen;
+}
+
+.customization-container label {
+  margin: 0 10px;
+}
+
+.customization-container select {
+  padding: 5px;
+  margin: 0 5px;
+  background: yellowgreen;
+}
+.pricing-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 3px solid yellowgreen;
+  border-radius: 10px;
+  color: yellowgreen;
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card .price {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.card button {
+  background: yellowgreen;
+  border-radius: 15px;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #555;
+}
+
+/* Footer Styles */
+footer {
+  background: linear-gradient(to right, yellow , green);
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Toggle Switch Styles */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: yellowgreen;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
