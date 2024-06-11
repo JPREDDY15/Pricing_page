@@ -3,20 +3,31 @@ document.addEventListener('DOMContentLoaded', function() {
   const unitSelect = document.getElementById('unit');
   const pricingCards = document.querySelectorAll('.card');
 
+  const exchangeRates = {
+    USD: 1,
+    EUR: 0.84,
+    GBP: 0.74,
+    INR: 73.57
+  };
+
   function updatePrices() {
-    const currencySymbol = currencySelect.value;
+    const currencySymbol = currencySelect.options[currencySelect.selectedIndex].dataset.symbol;
+    const currencyValue = currencySelect.value;
     const unit = unitSelect.value;
-
+    
     pricingCards.forEach(card => {
-      const monthlyPrice = card.getAttribute('data-monthly-price');
-      const yearlyPrice = card.getAttribute('data-yearly-price');
+      const monthlyPrice = parseFloat(card.getAttribute('data-monthly-price'));
+      const yearlyPrice = parseFloat(card.getAttribute('data-yearly-price'));
       const priceElement = card.querySelector('.price');
-
-      if (unit === '/year') {
-        priceElement.textContent = `${currencySymbol}${yearlyPrice}${unit}`;
+      
+      let convertedPrice;
+      if (unit === 'yearly') {
+        convertedPrice = yearlyPrice * exchangeRates[currencyValue];
+        priceElement.textContent = `${currencySymbol}${convertedPrice.toFixed(2)}/year`;
       } else {
-        priceElement.textContent = `${currencySymbol}${monthlyPrice}${unit}`;
-      } 
+        convertedPrice = monthlyPrice * exchangeRates[currencyValue];
+        priceElement.textContent = `${currencySymbol}${convertedPrice.toFixed(2)}/month`;
+      }
     });
   }
 
